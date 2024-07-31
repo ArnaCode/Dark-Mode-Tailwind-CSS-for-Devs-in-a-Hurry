@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+      };
+    </script>
+
+    <title>Dark Mode - Tailwind CSS for Devs in a Hurry</title>
+  </head>
+  <body class="h-screen flex justify-center items-center p-16">
+    <button
+      class="absolute top-0 left-0 bg-zinc-600 text-xl text-white px-4 py-2 darkModeToggle"
+    >
+      Toggle
+    </button>
+
+    <section
+      class="border-zinc-400 border-2 rounded px-8 py-6 max-w-screen-sm dark:bg-zinc-600 dark:border-zinc-600 transition-colors"
+    >
+      <h1 class="text-2xl text-zinc-950 font-semibold mb-2 dark:text-white">
+        Planet of the Apes
+      </h1>
+      <p class="text-zinc-900 dark:text-white">
+        Planet of the Apes is the longest-running American science-fiction film
+        series and has grossed a total of over US$2 billion worldwide, against a
+        combined budget of $567.5 million.
+      </p>
+    </section>
+
+    <script>
+      document
+        .querySelector(".darkModeToggle")
+        .addEventListener("click", () => {
+          document.body.classList.toggle("dark");
+        });
+    </script>
+  </body>
+</html>
